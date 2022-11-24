@@ -1,0 +1,33 @@
+:root {
+    --bs-primary: #4F61E8;
+    --bs-secondary: #EF7054;
+    --bs-dark:#1E2F61;
+    --black:#2E2E2E;
+    --bg-color:#F2FDFF;
+    --bs-light:#F2FDFF;
+}
+body {
+    background-color: var(--bg-color);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Roboto Slab','Noto Sans TC';
+}
+body.defualt, body.nav-doc {
+    background-image: url(../img/bg-desktop-1.png);   
+}
+body.nav-sign,body.nav-setting {
+    background-image: url(../img/bg-desktop-2.png);   
+}
+main {
+    position: relative;
+}
+/* button */
+button {    
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
