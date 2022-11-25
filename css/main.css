@@ -1,10 +1,28 @@
 :root {
-    --bs-primary: #4F61E8;
-    --bs-secondary: #EF7054;
-    --bs-dark:#1E2F61;
+    --bs-blue: #1A64FB;
+    --bs-red: #E32E2B;
+    --bs-yellow:#FFD33F;
     --black:#2E2E2E;
-    --bg-color:#F2FDFF;
-    --bs-light:#F2FDFF;
+    --bg-color:#454545;
+    --bs-light:#fff;
+}
+@font-face {
+    font-family: "KFhimaji";
+    src: url(../font/KFhimaji/KFhimaji.otf) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CHIKARA-YOWAKU";
+    src: url(../font/851CHIKARA-YOWAKU/チカラヨワク851CHIKARA-YOWAKU.ttf)   format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "jf-openhuninn";
+    src: url(../font/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf)   format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 body {
     background-color: var(--bg-color);
@@ -12,16 +30,99 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    font-family: 'Roboto Slab','Noto Sans TC';
-}
-body.defualt, body.nav-doc {
-    background-image: url(../img/bg-desktop-1.png);   
-}
-body.nav-sign,body.nav-setting {
-    background-image: url(../img/bg-desktop-2.png);   
 }
 main {
     position: relative;
+}
+a {
+    text-decoration: none;
+}
+.page-label {
+    position: absolute;
+    width: 101vw;
+    height: auto;
+    z-index: 1;
+}
+.page-label.top {
+    top: 0;
+}
+.page-label.bottom {
+    bottom: 0;
+}
+.scrum-panel {
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.scrum-panel.active {
+    display: block;
+}
+/*start*/
+#start {
+    z-index: 1;
+    position: relative;
+}
+.start-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.po, .role-user {
+    position: absolute;
+}
+#start .po {
+    left: -7%;
+    width: 690px;
+    top: 10%;
+}
+.role-user {
+    width: 630px;
+    right: 0;
+    top: 7%;
+}
+.role-user img[alt="user"] {
+    width: 100%;
+    height: auto;
+}
+.role-user img[alt="user_action"] {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 28%;
+    left: 14%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.start-title {
+    font-family: 'KFhimaji';
+    color:#fff;
+    letter-spacing: 5px;
+}
+.start-btn {
+    color: #FFD33F;
+    font-family: 'KFhimaji';
+    margin-top: 3em;
+}
+.copy-right {
+    font-family: 'jf-openhuninn';
+    font-size: 20px;    
+    text-align: center;
+    color: #E6E6E6;
+}
+/* story block */
+.story-block {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../img/QA_twohand.png);
+    position:absolute;
+    bottom:50%;
+}
+#story .po {
+    width: 50%;
+    height: auto;
 }
 /* button */
 button {    
