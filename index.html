@@ -38,8 +38,81 @@
 		</section>
 		<section id="story" class="scrum-panel">
 			<img class="po" src="img/img_po.png" alt="po">
-			<div class="story-block">
-
+			<div class="story-block" id="story-block">
+				<p class="animate__backInUp">Welcome to TT 資訊！<br>在加入我們之前，請先<br>
+					了解 Scrum 的精神並通過任務!</p>
+				<a href="#po-talk" id="to-po" class="step-btn mt-3" title="接受">接受</a>
+			</div>
+		</section>
+		<section id="po-talk" class="scrum-panel">
+			<img class="po" src="img/img_po_left.png" alt="po">
+			<img src="img/talking_box.png" alt="talking icon" class="talking">
+			<div class="info-block">
+				<div class="info01 animate__fadeInUp active">我是 TT 資訊，開發組的 PO。<br>
+					PO 就是產品負責人（Product Owner），產品負責人會負責評估產品待辦清單的價值與重要性，依序排列要執行的優先順序，對齊產品目標。
+					最後排出產品待辦清單（Product Backlog）唷！</div>
+				<div class="info02 animate__fadeInUp">
+					剛好我最近手邊有一個『人才招募系統』的案子，我才剛列出了『產品需求清單』。
+					既然你都來了，就讓你來試試看調整產品優先度，排出產品待辦清單吧！</div>
+				<button class="next" title="下一則">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+						<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				 	</svg>
+				</button>
+				<button class="again hide" title="再說一次">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+						<path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+					</svg>
+				</button>
+				<a href="#go-test" id="to-test" class="step-btn mt-2 hide" title="GO!">GO!</a>
+			</div>
+		</section>
+		<section id="go-test" class="scrum-panel">
+			<h4 class="action-tip text-center mt-3">請把需求放到產品待辦清單，並調整待辦的優先度順序。
+			</h4>
+			<img class="po" src="img/img_po.png" alt="po">
+			<div class="test-block" id="test-block">				
+				<div class="test-area">
+					<div class="drag-block">
+						<div class="test-title">
+							<h3>Projects / TT / 人才招募系統 </h3>
+							<h2>產品待辦清單 <em>(Product Backlog)</em></h2>
+						</div>
+						<div class="drag-card-group">
+							<div class="drag-card">
+								<h4>後台職缺管理功能</h4>
+								<p>（資訊上架、下架、顯示應徵者資料）</p>
+							</div>
+							<div class="drag-card">
+								<h4>會員系統</h4>
+								<p>（登入、註冊、權限管理）</p>
+							</div>
+							<div class="drag-card">
+								<h4>線上履歷編輯器</h4>
+							</div>
+							<div class="drag-card">
+								<h4>前台職缺列表</h4>
+								<p>（職缺詳細內容、發送應徵意願）</p></div>
+						</div>
+					</div>
+					<div class="sort-card">
+						<div class="sort-block">
+							<h3>依優先度排序</h3>
+							<div class="sort-area">
+								<div class="sort"><em class="sort-num">1</em></div>
+								<div class="sort"><em class="sort-num">2</em></div>
+								<div class="sort"><em class="sort-num">3</em></div>
+								<div class="sort"><em class="sort-num">4</em></div>
+							</div>
+						</div>
+						<div class="sort-tip">
+							<b>High</b>
+							<img src="img/sort_arrow.svg" alt="sort arrow" class="sort-arrow">
+							<b>Low</b>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>

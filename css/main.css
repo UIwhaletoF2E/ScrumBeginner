@@ -56,8 +56,11 @@ a {
     width: 100vw;
     overflow: hidden;
 }
-.scrum-panel.active {
-    display: block;
+.active {
+    display: block!important;
+}
+.hide {
+    display: none!important;
 }
 /*start*/
 #start {
@@ -113,16 +116,189 @@ a {
     color: #E6E6E6;
 }
 /* story block */
-.story-block {
+#story-block {
     width: 100%;
-    height: 60vh;
+    height: 134vh;
     background-image: url(../img/QA_twohand.png);
-    position:absolute;
-    bottom:50%;
+    background-size: cover;
+    position: relative;    
+    transform: scale(.8) translateY(25%);
+    transition-delay: 1.5s;
+    transition-duration: 2s;
+    padding: 15% 10%;
+}
+#story-block.active {
+    transform: scale(1) translateY(0);
 }
 #story .po {
-    width: 50%;
+    width: 40%;
     height: auto;
+    left: 35%;
+    z-index: -1;
+}
+#story-block p {
+    font-size: 3rem;
+    color: #454545;
+    font-family: 'jf-openhuninn';
+    padding: 3rem;
+    text-align: center;
+}
+#story-block .step-btn {
+    position: absolute;
+    left: 45%;
+}
+/* po-talk */
+#po-talk .po {
+    width: 35%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+#po-talk .talking {
+    width: 15%;
+    position: absolute;
+    left: 30%;
+    animation: swing 3s linear infinite;
+}
+.info-block {
+    position: absolute;
+    bottom: 28px;
+    left: 25px;
+    background: #F3EEE9;
+    width: calc( 100vw - 50px);
+    min-height: 30vh;
+    border-radius: 5px;
+    padding: 1em 2em;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 4px #201c1b, 0 0 0 21px #9e9d9c, 0 0 0 25px #201c1b;
+}
+.info-block .step-btn {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info01, .info02 {
+    display: none;
+}
+.again {
+    width: fit-content;
+    height: auto;
+    margin-left: auto;
+}
+.again svg {
+    fill: #9E9D9C;
+}
+.next:hover svg, .again:hover svg {
+    fill: var(--bs-blue);
+}
+/* test-block */
+#go-test .po {
+    width: 35%;
+    position: absolute;
+    right: 0;
+    top: 5%;
+}
+#test-block {
+    width: 100%;
+    height: 134vh;
+    background-image: url(../img/QA_onehand.png);
+    background-size: cover;
+    position: relative;    
+    transform: scale(.8) rotate(30deg) translateY(30%);
+    transition-delay: 1.5s;
+    transition-duration: 2s;
+    padding: 13% 18%;
+}
+#test-block.active {
+    transform: scale(1.15) rotate(0) translateY(-8%);
+}
+.test-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.action-tip, .drag-card {
+    font-family: 'jf-openhuninn';
+    color: var(--bs-light);
+}
+.test-title {
+    font-family: 'jf-openhuninn';
+    color: #454545;
+}
+.test-title h3 {
+    opacity: .6;
+    margin-bottom: 1rem;
+}
+.test-title h2 em {
+    font-size: 1.2rem;
+}
+
+.drag-card {
+    width: 256px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    font-size: 24px;
+    background-image: url(../img/drag-card.png);
+    background-size: 100% 100%;
+    margin-left: auto;
+}
+.drag-card:nth-child(even) {
+    transform: translateX(2em);
+}
+.drag-card + .drag-card {
+    margin-top: 1em;
+}
+.drag-card p {
+    margin-top: 5px;
+    font-size: .8rem;
+}
+.sort-card {
+    color: #fff;
+    background: #1A64FB;
+    border-radius: 20px;
+    padding: 1em;
+    font-family: 'jf-openhuninn';
+    font-size: 30px;
+    letter-spacing: .05em;
+    position: relative;
+    padding-right: 3em;
+}
+.sort {
+    width: 276px;
+    height: 100px;
+    border: 2px dashed #fff;
+    border-radius: 8px;
+    margin: 12px auto;
+}
+.sort em {
+    font-size: 60px;
+    text-align: center;
+    opacity: 0.4;
+    display: block;
+    z-index: -1;
+}
+
+.sort-tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #002B78;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.sort-tip b {
+    color: #fff;
+    opacity: .6;
+    transform: rotate(-90deg);
+    padding: 1em 0;
+    font-size: 18px;
 }
 /* button */
 button {    
@@ -130,5 +306,10 @@ button {
     outline: none;
     background-color: transparent;
 }
-
+.step-btn {
+    font-size: 6rem;
+    color: #454545;
+    font-family: 'KFhimaji';
+    letter-spacing: 1rem;
+}
 
